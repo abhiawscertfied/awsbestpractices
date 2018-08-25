@@ -1,0 +1,128 @@
+cld-sap-cmpn2.amgen.com | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"cld-sap-cmpn2.amgen.com\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+cld-sap-cmpnd1.amgen.com | FAILED | rc=125 >>
+docker: Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
+See 'docker run --help'.non-zero return code
+cld-sap-k8or2.amgen.com | SUCCESS | rc=0 >>
+
+INFO: Running Agent Registration Process, CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Attempting to connect to: https://tla-rancher-sbox.amgen.com/v1
+INFO: https://tla-rancher-sbox.amgen.com/v1 is accessible
+INFO: Configured Host Registration URL info: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1 ENV_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Inspecting host capabilities
+INFO: Boot2Docker: false
+INFO: Host writable: true
+INFO: Token: xxxxxxxx
+INFO: Running registration
+INFO: Printing Environment
+INFO: ENV: CATTLE_ACCESS_KEY=D96272A8D684CDD7478F
+INFO: ENV: CATTLE_HOME=/var/lib/cattle
+INFO: ENV: CATTLE_REGISTRATION_ACCESS_KEY=registrationToken
+INFO: ENV: CATTLE_REGISTRATION_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: ENV: DETECTED_CATTLE_AGENT_IP=10.204.37.162
+INFO: ENV: RANCHER_AGENT_IMAGE=rancher/agent:v1.2.11
+INFO: Deleting container rancher-agent
+INFO: Launched Rancher Agent: efa83adc2351f539516ee89e88e7222ef41c8ac184de3165badc5204b994347d
+cld-sap-jcon1.amgen.com | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"cld-sap-jcon1.amgen.com\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+cld-sap-jcon2.amgen.com | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "SSH Error: data could not be sent to remote host \"cld-sap-jcon2.amgen.com\". Make sure this host can be reached over ssh", 
+    "unreachable": true
+}
+cld-sap-k8or1.amgen.com | SUCCESS | rc=0 >>
+
+INFO: Running Agent Registration Process, CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Attempting to connect to: https://tla-rancher-sbox.amgen.com/v1
+INFO: https://tla-rancher-sbox.amgen.com/v1 is accessible
+INFO: Configured Host Registration URL info: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1 ENV_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Inspecting host capabilities
+INFO: Boot2Docker: false
+INFO: Host writable: true
+INFO: Token: xxxxxxxx
+INFO: Running registration
+INFO: Printing Environment
+INFO: ENV: CATTLE_ACCESS_KEY=D96272A8D684CDD7478F
+INFO: ENV: CATTLE_HOME=/var/lib/cattle
+INFO: ENV: CATTLE_REGISTRATION_ACCESS_KEY=registrationToken
+INFO: ENV: CATTLE_REGISTRATION_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: ENV: DETECTED_CATTLE_AGENT_IP=10.204.37.88
+INFO: ENV: RANCHER_AGENT_IMAGE=rancher/agent:v1.2.11
+INFO: Deleting container rancher-agent
+INFO: Launched Rancher Agent: 8044e8e71610fe7f6f709c14100bca69e27d82ee10711b7196e7d9d8dd7cd76f
+cld-sap-k8dt1.amgen.com | SUCCESS | rc=0 >>
+
+INFO: Running Agent Registration Process, CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Attempting to connect to: https://tla-rancher-sbox.amgen.com/v1
+INFO: https://tla-rancher-sbox.amgen.com/v1 is accessible
+INFO: Configured Host Registration URL info: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1 ENV_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Inspecting host capabilities
+INFO: Boot2Docker: false
+INFO: Host writable: true
+INFO: Token: xxxxxxxx
+INFO: Running registration
+INFO: Printing Environment
+INFO: ENV: CATTLE_ACCESS_KEY=D96272A8D684CDD7478F
+INFO: ENV: CATTLE_HOME=/var/lib/cattle
+INFO: ENV: CATTLE_REGISTRATION_ACCESS_KEY=registrationToken
+INFO: ENV: CATTLE_REGISTRATION_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: ENV: DETECTED_CATTLE_AGENT_IP=10.204.37.90
+INFO: ENV: RANCHER_AGENT_IMAGE=rancher/agent:v1.2.11
+INFO: Deleting container rancher-agent
+INFO: Launched Rancher Agent: 7e115a4d9a051571afa1ab12e693ef64caea02fcbdd6dc7e4d59b8ba54527a70
+cld-sap-k8dt2.amgen.com | SUCCESS | rc=0 >>
+
+INFO: Running Agent Registration Process, CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Attempting to connect to: https://tla-rancher-sbox.amgen.com/v1
+INFO: https://tla-rancher-sbox.amgen.com/v1 is accessible
+INFO: Configured Host Registration URL info: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1 ENV_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Inspecting host capabilities
+INFO: Boot2Docker: false
+INFO: Host writable: true
+INFO: Token: xxxxxxxx
+INFO: Running registration
+INFO: Printing Environment
+INFO: ENV: CATTLE_ACCESS_KEY=D96272A8D684CDD7478F
+INFO: ENV: CATTLE_HOME=/var/lib/cattle
+INFO: ENV: CATTLE_REGISTRATION_ACCESS_KEY=registrationToken
+INFO: ENV: CATTLE_REGISTRATION_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: ENV: DETECTED_CATTLE_AGENT_IP=10.204.37.24
+INFO: ENV: RANCHER_AGENT_IMAGE=rancher/agent:v1.2.11
+INFO: Deleting container rancher-agent
+INFO: Launched Rancher Agent: 7e560279155b7b25060a3cf0bf6a9b79a697791cd3914b371a33813fee451055
+cld-sap-k8dt3.amgen.com | SUCCESS | rc=0 >>
+
+INFO: Running Agent Registration Process, CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Attempting to connect to: https://tla-rancher-sbox.amgen.com/v1
+INFO: https://tla-rancher-sbox.amgen.com/v1 is accessible
+INFO: Configured Host Registration URL info: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1 ENV_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: Inspecting host capabilities
+INFO: Boot2Docker: false
+INFO: Host writable: true
+INFO: Token: xxxxxxxx
+INFO: Running registration
+INFO: Printing Environment
+INFO: ENV: CATTLE_ACCESS_KEY=D96272A8D684CDD7478F
+INFO: ENV: CATTLE_HOME=/var/lib/cattle
+INFO: ENV: CATTLE_REGISTRATION_ACCESS_KEY=registrationToken
+INFO: ENV: CATTLE_REGISTRATION_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_SECRET_KEY=xxxxxxx
+INFO: ENV: CATTLE_URL=https://tla-rancher-sbox.amgen.com/v1
+INFO: ENV: DETECTED_CATTLE_AGENT_IP=10.204.37.89
+INFO: ENV: RANCHER_AGENT_IMAGE=rancher/agent:v1.2.11
+INFO: Deleting container rancher-agent
+INFO: Launched Rancher Agent: d77a0d680eaee82ce8696ff875965e6bd431f848335a327a5c2d7e62ce251e3e

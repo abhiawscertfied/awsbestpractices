@@ -1,0 +1,74 @@
+
+PLAY [server] *******************************************************************************************************************************************************
+
+TASK [rancher : get public IP] **************************************************************************************************************************************
+ok: [cld-sap-rnch3.amgen.com]
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch2.amgen.com]
+
+TASK [rancher : determine if docker is installed] *******************************************************************************************************************
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch2.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+
+TASK [rancher : get docker version] *********************************************************************************************************************************
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+ok: [cld-sap-rnch2.amgen.com]
+
+TASK [rancher : install or upgrade docker] **************************************************************************************************************************
+
+TASK [rancher : install the latest version of EPEL] *****************************************************************************************************************
+ok: [cld-sap-rnch2.amgen.com]
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+
+TASK [rancher : uninstall pip] **************************************************************************************************************************************
+
+TASK [rancher : install pip (Debian)] *******************************************************************************************************************************
+
+TASK [rancher : install pip (CentOS)] *******************************************************************************************************************************
+ok: [cld-sap-rnch3.amgen.com]
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch2.amgen.com]
+
+TASK [rancher : upgrade pip (Ubuntu)] *******************************************************************************************************************************
+
+TASK [rancher : install additional dependencies (pip)] **************************************************************************************************************
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch2.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+
+TASK [rancher : add our login user to docker group] *****************************************************************************************************************
+ok: [cld-sap-rnch2.amgen.com]
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+
+TASK [rancher : make sure docker is running] ************************************************************************************************************************
+ok: [cld-sap-rnch2.amgen.com]
+ok: [cld-sap-rnch1.amgen.com]
+ok: [cld-sap-rnch3.amgen.com]
+
+TASK [rancher : install additional dependencies (apt)] **************************************************************************************************************
+
+TASK [rancher : install additional dependencies (yum)] **************************************************************************************************************
+ok: [cld-sap-rnch1.amgen.com] => (item=[u'MySQL-python', u'mysql'])
+ok: [cld-sap-rnch2.amgen.com] => (item=[u'MySQL-python', u'mysql'])
+ok: [cld-sap-rnch3.amgen.com] => (item=[u'MySQL-python', u'mysql'])
+
+TASK [rancher : sanity check on options] ****************************************************************************************************************************
+
+TASK [rancher : create the database (if necessary)] *****************************************************************************************************************
+ok: [cld-sap-rnch1.amgen.com]
+
+TASK [rancher : create the database user (if necessary)] ************************************************************************************************************
+fatal: [cld-sap-rnch1.amgen.com]: FAILED! => {"changed": false, "msg": "unable to connect to database, check login_user and login_password are correct or /root/.my.cnf has the credentials. Exception message: (1044, \"Access denied for user 'rancher'@'%' to database 'mysql'\")"}
+
+NO MORE HOSTS LEFT **************************************************************************************************************************************************
+	to retry, use: --limit @/home/svc-tla-dev/rancher-ansible-playbooks/rancher.retry
+
+PLAY RECAP **********************************************************************************************************************************************************
+cld-sap-rnch1.amgen.com    : ok=10   changed=0    unreachable=0    failed=1   
+cld-sap-rnch2.amgen.com    : ok=9    changed=0    unreachable=0    failed=0   
+cld-sap-rnch3.amgen.com    : ok=9    changed=0    unreachable=0    failed=0   
+

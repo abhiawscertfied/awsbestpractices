@@ -1,0 +1,44 @@
+
+PLAY [server] *******************************************************************************************************************************************************
+skipping: no hosts matched
+
+PLAY [node] *********************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************
+fatal: [cld-sap-cmpn2.amgen.com]: UNREACHABLE! => {"changed": false, "msg": "SSH Error: data could not be sent to remote host \"cld-sap-cmpn2.amgen.com\". Make sure this host can be reached over ssh", "unreachable": true}
+fatal: [cld-sap-jcon2.amgen.com]: UNREACHABLE! => {"changed": false, "msg": "SSH Error: data could not be sent to remote host \"cld-sap-jcon2.amgen.com\". Make sure this host can be reached over ssh", "unreachable": true}
+fatal: [cld-sap-jcon1.amgen.com]: UNREACHABLE! => {"changed": false, "msg": "SSH Error: data could not be sent to remote host \"cld-sap-jcon1.amgen.com\". Make sure this host can be reached over ssh", "unreachable": true}
+
+TASK [rancher : determine if we're already running an agent] ********************************************************************************************************
+fatal: [cld-sap-cmpnd1.amgen.com]: FAILED! => {"changed": false, "cmd": "docker ps | fgrep -q rancher/agent", "delta": "0:00:00.010849", "end": "2018-08-25 01:40:34.183111", "msg": "non-zero return code", "rc": 1, "start": "2018-08-25 01:40:34.172262", "stderr": "Cannot connect to the Docker daemon. Is the docker daemon running on this host?", "stderr_lines": ["Cannot connect to the Docker daemon. Is the docker daemon running on this host?"], "stdout": "", "stdout_lines": []}
+...ignoring
+ok: [cld-sap-k8dt2.amgen.com]
+ok: [cld-sap-k8dt1.amgen.com]
+ok: [cld-sap-k8or2.amgen.com]
+ok: [cld-sap-k8or1.amgen.com]
+ok: [cld-sap-k8dt3.amgen.com]
+
+TASK [rancher : get registration tokens] ****************************************************************************************************************************
+ok: [cld-sap-cmpnd1.amgen.com]
+
+TASK [rancher : register host (attempt one)] ************************************************************************************************************************
+fatal: [cld-sap-cmpnd1.amgen.com]: FAILED! => {"msg": "The conditional check 'agent_installed|failed and registration_tokens.json.data|selectattr('state', 'equalto', 'active')|list|length > 0' failed. The error was: no test named 'equalto'\n\nThe error appears to have been in '/home/svc-tla-dev/rancher-ansible-playbooks/roles/rancher/tasks/node.yml': line 26, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n# our host\n- name: register host (attempt one)\n  ^ here\n"}
+
+TASK [rancher : create registration url] ****************************************************************************************************************************
+
+TASK [rancher : get registration tokens (again)] ********************************************************************************************************************
+
+TASK [rancher : register host (attempt two)] ************************************************************************************************************************
+	to retry, use: --limit @/home/svc-tla-dev/rancher-ansible-playbooks/rancher.retry
+
+PLAY RECAP **********************************************************************************************************************************************************
+cld-sap-cmpn2.amgen.com    : ok=0    changed=0    unreachable=1    failed=0   
+cld-sap-cmpnd1.amgen.com   : ok=2    changed=0    unreachable=0    failed=1   
+cld-sap-jcon1.amgen.com    : ok=0    changed=0    unreachable=1    failed=0   
+cld-sap-jcon2.amgen.com    : ok=0    changed=0    unreachable=1    failed=0   
+cld-sap-k8dt1.amgen.com    : ok=1    changed=0    unreachable=0    failed=0   
+cld-sap-k8dt2.amgen.com    : ok=1    changed=0    unreachable=0    failed=0   
+cld-sap-k8dt3.amgen.com    : ok=1    changed=0    unreachable=0    failed=0   
+cld-sap-k8or1.amgen.com    : ok=1    changed=0    unreachable=0    failed=0   
+cld-sap-k8or2.amgen.com    : ok=1    changed=0    unreachable=0    failed=0   
+
